@@ -1,0 +1,111 @@
+/* --- Carrusel de Proyectos --- */
+.carrusel-proyectos-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.carrusel-proyecto-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #001122, #002244, #004488);
+}
+
+.carrusel-proyecto-slide.active {
+  opacity: 1;
+}
+
+.carrusel-proyecto-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrusel-proyecto-texto {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.carrusel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+}
+
+.carrusel-controls button {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.carrusel-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* --- Grid de Proyectos --- */
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.proyecto-card {
+  background: linear-gradient(135deg, #001122, #002244, #004488);
+  color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.proyecto-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.proyecto-card h3 {
+  margin: 15px 0 10px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.proyecto-card p {
+  font-size: 0.95rem;
+  padding: 0 15px 20px 15px;
+  text-align: center;
+}

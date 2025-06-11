@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import '../styles/Inicio.css'
 
 function Inicio() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -43,8 +44,10 @@ function Inicio() {
         </div>
       </div>
 
-      <h1>Bienvenido a nuestra empresa de Telecomunicaciones</h1>
-      <p>Especialistas en sistemas tecnológicos, redes, CCTV y alarmas.</p>
+      <div className="page-container">
+        <h1>Bienvenido a nuestra empresa de Telecomunicaciones</h1>
+        <p>Especialistas en sistemas tecnológicos, redes, CCTV y alarmas.</p>
+      </div>
     </div>
   )
 }

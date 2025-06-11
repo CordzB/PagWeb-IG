@@ -1,0 +1,237 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Root para que el footer quede abajo */
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page container */
+.page-container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- Menu --- */
+.menu {
+  background: linear-gradient(135deg, #001122, #002244, #004488);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.menu-hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.menu-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-links li a:hover {
+  background-color: #ffcc00;
+  color: #002244;
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  .menu-hamburger {
+    display: block;
+  }
+
+  .menu-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: linear-gradient(135deg, #001122, #002244, #004488);
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+
+  .menu-links.active {
+    display: flex;
+  }
+
+  .menu-links li {
+    width: 100%;
+  }
+
+  .menu-links li a {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* --- Footer bonito --- */
+.footer {
+  background: linear-gradient(135deg, #001122, #002244, #004488);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+  margin-top: 20px;
+}
+
+/* --- Carrusel --- */
+.carrusel-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.carrusel-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.carrusel-slide.active {
+  opacity: 1;
+}
+
+.slide-1 {
+  background: linear-gradient(135deg, #555, #777);
+}
+
+.slide-2 {
+  background: linear-gradient(135deg, #444, #666);
+}
+
+.slide-3 {
+  background: linear-gradient(135deg, #333, #555);
+}
+
+.carrusel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carrusel-controls button {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.carrusel-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* --- Botón sutil para cards --- */
+.btn-sutil {
+  background-color: transparent;
+  color: #004488;
+  border: 1px solid #004488;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-sutil:hover {
+  background-color: #004488;
+  color: #ffffff;
+}
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.1);
+}
