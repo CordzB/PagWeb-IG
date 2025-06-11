@@ -1,15 +1,34 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import './Menu.css'
 
 function Menu() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
-    <nav>
-      <ul>
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/nosotros">Nosotros</Link></li>
-        <li><Link to="/servicios">Servicios</Link></li>
-        <li><Link to="/proyectos">Proyectos</Link></li>
-        <li><Link to="/contacto">Contacto</Link></li>
-      </ul>
+    <nav className="menu">
+      <div className="menu-container">
+        <div className="menu-logo">
+          INFINITY GROUP
+          <i className="bi bi-infinity" style={{ marginLeft: '8px' }}></i>
+        </div>
+
+        <div className="menu-hamburger" onClick={toggleMenu}>
+          ☰
+        </div>
+
+        <ul className={`menu-links ${menuOpen ? 'active' : ''}`}>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
+          <li><Link to="/nosotros" onClick={() => setMenuOpen(false)}>Nosotros</Link></li>
+          <li><Link to="/servicios" onClick={() => setMenuOpen(false)}>Servicios</Link></li>
+          <li><Link to="/proyectos" onClick={() => setMenuOpen(false)}>Proyectos</Link></li>
+          <li><Link to="/contacto" onClick={() => setMenuOpen(false)}>Contacto</Link></li>
+        </ul>
+      </div>
     </nav>
   )
 }
