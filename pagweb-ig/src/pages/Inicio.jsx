@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import '../styles/Carrusel.css'
 
 function Inicio() {
   const [currentSlide, setCurrentSlide] = useState(0)
