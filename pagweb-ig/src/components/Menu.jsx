@@ -12,10 +12,18 @@ function Menu() {
   return (
     <nav className="menu">
       <div className="menu-container">
-        <div className="menu-logo">
-          INFINITY GROUP
-          <i className="bi bi-infinity" style={{ marginLeft: '8px' }}></i>
-        </div>
+       <div className="menu-logo">
+  INFINITY GROUP
+  <i
+    className="bi bi-infinity"
+    style={{
+      marginLeft: '8px',
+      fontSize: '2.5rem', /* más grande */
+      verticalAlign: 'middle' /* para que quede bien alineado */
+    }}
+  ></i>
+</div>
+
 
         <div className="menu-hamburger" onClick={toggleMenu}>
           ☰

@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer>
-      <p>© 2025 Empresa de Telecomunicaciones - Todos los derechos reservados.</p>
+    <footer className="footer">
+      <p>© 2025 Inversiones BS Cruz S.A. de C.V. - Todos los derechos reservados.</p>
     </footer>
   )
 }
