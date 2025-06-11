@@ -2,7 +2,6 @@ function Proyectos() {
   return (
     <div>
       <h1>Proyectos</h1>
-      <p>Aquí mostramos algunos de nuestros proyectos realizados en telecomunicaciones, redes, CCTV y sistemas de alarma.</p>
       <ul>
         <li>Instalación de red de fibra óptica para empresa X</li>
         <li>Sistema de CCTV para centro comercial Y</li>
